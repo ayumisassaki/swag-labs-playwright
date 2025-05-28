@@ -8,6 +8,7 @@ export class CheckoutPage {
         this.postalCodeField = page.locator("[data-test='postalCode']")
         this.continueButton = page.locator("[name='continue']")
         this.finishButton = page.locator("[name='finish']")
+        this.successMessage = page.locator('[data-test="complete-header"]')
         
     }
         async checkout() { 
@@ -18,8 +19,6 @@ export class CheckoutPage {
         await this.postalCodeField.type('123456')
         await this.continueButton.click()
         await this.finishButton.click()
-        await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html')
-        await expect(page.getByText('Thank you for your order!')).toBeVisible()
-        
+       
     }
 }

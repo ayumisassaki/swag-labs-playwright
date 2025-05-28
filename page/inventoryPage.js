@@ -9,10 +9,28 @@ export class InventoryPage {
 
     async validateInventoryPage() {
         await this.productsHeader.waitFor()
-        await this.productSortContainer.selectOption('lohi')
-        await this.selectproduct.click()
-
     }
+
+    async sortByPriceHiLo() {
+        await this.productSortContainer.selectOption('hilo') 
+    }
+
+    async sortByPriceLowHi() {
+        await this.productSortContainer.selectOption('lohi')
+    }
+
+    async sortByAZ() {
+        await this.productSortContainer.selectOption('az')
+    }
+
+    async sortByZA() {
+        await this.productSortContainer.selectOption('za')
+    }
+
+    async chooseProduct() {
+        await this.selectproduct.click()
+    }
+    
 
 
 }
