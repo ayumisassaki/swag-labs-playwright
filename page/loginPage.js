@@ -1,11 +1,9 @@
-
 const testdata= JSON.parse(JSON.stringify(require("../testdata.json")))
-
 export class LoginPage {
     constructor(page) {
         this.page = page
-        this.usernameField = page.getByPlaceholder('Username')
-        this.passwordField = page.getByPlaceholder('Password')
+        this.usernameField = page.getByPlaceholder('username')
+        this.passwordField = page.getByPlaceholder('password')
         this.loginButton = page.locator("[name='login-button']")
     }
 

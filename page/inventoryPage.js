@@ -3,8 +3,8 @@ export class InventoryPage {
         this.page = page
         this.productsHeader = page.locator("[data-test='title']")
         this.productSortContainer = page.locator("[data-test='product-sort-container']")
-        this.selectproduct = page.locator("[alt='Sauce Labs Onesie']")
-
+        this.selectproduct = page.getByAltText('Sauce Labs Onesie')
+    
     }
 
     async validateInventoryPage() {
@@ -27,7 +27,7 @@ export class InventoryPage {
         await this.productSortContainer.selectOption('za')
     }
 
-    async chooseProduct() {
+    async selectProduct() {
         await this.selectproduct.click()
     }
     

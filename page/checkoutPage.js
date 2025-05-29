@@ -1,3 +1,5 @@
+const testdata= JSON.parse(JSON.stringify(require("../testdata.json")))
+
 export class CheckoutPage {
     constructor(page) {
         this.page = page
@@ -14,9 +16,9 @@ export class CheckoutPage {
         async checkout() { 
         await this.cartIcon.click()
         await this.checkoutButton.click()
-        await this.firstNameField.type('Tatiana')
-        await this.lastNameField.type('Sassaki')
-        await this.postalCodeField.type('123456')
+        await this.firstNameField.type('firsName')
+        await this.lastNameField.type('lastName')
+        await this.postalCodeField.type('postalCode')
         await this.continueButton.click()
         await this.finishButton.click()
        
