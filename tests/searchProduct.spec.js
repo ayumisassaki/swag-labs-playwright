@@ -15,5 +15,5 @@ test('search for a product', async ({ page }) => {
   await inventoryPage.sortByPriceLowHi()
   await inventoryPage.chooseProduct()
   await expect(page.getByText('Sauce Labs Onesie')).toBeVisible()
-
+  
 });

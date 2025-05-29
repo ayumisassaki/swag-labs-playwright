@@ -1,3 +1,6 @@
+
+const testdata= JSON.parse(JSON.stringify(require("../testdata.json")))
+
 export class LoginPage {
     constructor(page) {
         this.page = page
@@ -7,8 +10,8 @@ export class LoginPage {
     }
 
     async loginWithUser() {
-        await this.usernameField.fill('standard_user')
-        await this.passwordField.fill('secret_sauce')
+        await this.usernameField.fill(testdata.username)
+        await this.passwordField.fill(testdata.password)
         await this.loginButton.click()
     }
 }
