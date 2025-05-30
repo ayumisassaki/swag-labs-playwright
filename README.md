@@ -4,8 +4,7 @@ This repository contains a project built using the Page Object Model (POM) struc
 
 <h2>Project Overview</h2> 
 <p>
-  This repository contains a project built using the <strong>Page Object Model (POM)</strong> structure with tools such as 
-  <strong>Selenium WebDriver</strong> and a test framework like <strong>JUnit</strong> or <strong>TestNG</strong>.
+  This repository contains a project built using the <strong>Page Object Model (POM)</strong> structure.
   It is designed for automated web testing to validate the <strong>user registration</strong> and 
   <strong>product search</strong> workflows on a public e-commerce website.
 </p>
