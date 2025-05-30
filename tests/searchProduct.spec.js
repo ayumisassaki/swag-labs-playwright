@@ -18,6 +18,5 @@ test('Sort products', async ({ page }) => {
   await inventoryPage.sortByZA()
   await inventoryPage.sortByAZ()
   await inventoryPage.sortByPriceLowHi()
-  await inventoryPage.selectProduct()
-  await expect(page.getByText('Sauce Labs Onesie')).toBeVisible()
+  await inventoryPage.checkLoHiprice()
 })

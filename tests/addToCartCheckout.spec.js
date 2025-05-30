@@ -19,9 +19,8 @@ test('add product to cart and checkout', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page)
 
     await inventoryPage.sortByPriceLowHi()
-    await expect(page.getByText('Sauce Labs Onesie')).toBeVisible()
-    await expect(page.getByText('$7.99')).toBeVisible()
     await inventoryPage.selectProduct()
+    await expect(page.getByText('Sauce Labs Onesie')).toBeVisible()
     await productPage.addToCart()
     await checkoutPage.checkout()
     await expect(checkoutPage.successMessage).toHaveText('Thank you for your order!')
