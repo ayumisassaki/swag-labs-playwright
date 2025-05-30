@@ -6,13 +6,13 @@ test.beforeEach(async ({ page }) => {
   const login = new LoginPage(page)
   const inventoryPage = new InventoryPage(page)
 
-    await page.goto('https://www.saucedemo.com/')
-    await login.loginWithUser()
-    await inventoryPage.validateInventoryPage()
+  await page.goto('')
+  await login.loginWithUser()
+  await inventoryPage.validateInventoryPage()
 })
 
-  test('Sort products', async ({ page }) => {
-    const inventoryPage = new InventoryPage(page)
+test('Sort products', async ({ page }) => {
+  const inventoryPage = new InventoryPage(page)
 
   await inventoryPage.sortByPriceHiLo()
   await inventoryPage.sortByZA()

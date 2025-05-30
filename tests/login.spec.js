@@ -4,9 +4,9 @@ import { LoginPage } from '../page/loginPage'
 test('Login com sucesso', async ({ page }) => {
   const login = new LoginPage(page)
 
-  await page.goto('https://www.saucedemo.com/')
+  await page.goto('')
   await login.loginWithUser()
-  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html')
+  await expect(page).toHaveURL('/inventory.html')
   
 });
 
