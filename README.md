@@ -23,3 +23,21 @@ This repository contains a project built using the Page Object Model (POM) struc
 <p> :small_blue_diamond: <strong>Playwright</strong>: A versatile library tailored for browser automation with a focus on reliability. </p>
 <p> :small_blue_diamond: <strong>JavaScript</strong> </p>
 <p>:small_blue_diamond:<strong> npm</strong>: The package manager for JavaScript.</p>
+
+# Getting Started
+To get started, follow these steps:
+
+Install the dependencies:
+
+``` sh
+npm install
+```
+Install playwright: 
+``` sh
+npm init playwright@latest
+```
+
+Run the tests:
+```sh
+npx playwright test --ui
+```
